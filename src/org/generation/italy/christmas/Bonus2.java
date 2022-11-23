@@ -1,18 +1,18 @@
 package org.generation.italy.christmas;
 
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Bonus2 {
-
+	
 	public static void main(String[] args) {
 		
 		//apriamo un scanner per la comunicazione
 		Scanner sc = new Scanner(System.in);
 		
 		// creo la collection dove inseriro i caratteri
-		Set<Character> charat = new HashSet<>();
+		Set<Character> charat = new TreeSet<>();
 		
 		
 		
@@ -26,6 +26,8 @@ public class Bonus2 {
 		}
 		
 		System.out.println(charat);
+		System.out.println("--------------------");
+		
 		// chiudiamo il canale di comunicazione
 		sc.close();
 	}

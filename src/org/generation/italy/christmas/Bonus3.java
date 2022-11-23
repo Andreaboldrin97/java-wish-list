@@ -1,7 +1,7 @@
 package org.generation.italy.christmas;
 
-import java.util.HashMap;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.Map;
 
 public class Bonus3 {
@@ -10,7 +10,7 @@ public class Bonus3 {
 				Scanner sc = new Scanner(System.in);
 				
 				// creo la collection dove inseriro i caratteri
-				Map<Integer, Character> charat = new HashMap<>();
+				Map<Character, Integer> charat = new TreeMap<>();
 				
 				
 				
@@ -20,7 +20,7 @@ public class Bonus3 {
 				for (int i = 0; i < word.length(); i++) {
 					//prendo il sinoglo carattere e lo aggingo collection
 					char wordChar = word.charAt(i);
-					charat.put(i, wordChar);
+					charat.put(wordChar , i);
 				}
 				
 				System.out.println(charat);
