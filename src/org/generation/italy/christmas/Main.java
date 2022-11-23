@@ -2,7 +2,6 @@ package org.generation.italy.christmas;
 
 // importo le due librerie 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -39,7 +38,7 @@ public class Main {
 				}
 			}
 			// TODO Auto-generated method stub
-			return - o2V;
+			return o2V - o1V;
 		}
 	}
 	//metodo di eseguzione
@@ -95,5 +94,7 @@ public class Main {
 		
 		//chiudo lo scanner di comunicazione
 		sc.close();
+		
+
 	}
 }
