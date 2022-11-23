@@ -2,18 +2,44 @@ package org.generation.italy.christmas;
 
 // importo le due librerie 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 	//metodo di comparazione
-	public static class vowelsComparator implements Comparator<String>{
+	public static class VowelsComparator implements Comparator<String>{
 
 		@Override
 		public int compare(String o1, String o2) {
+			// variabili di condizione
+			int o1V = 0 ;
+			int o2V = 0 ;
+			
+			//ciclo sulle parole per trovare il numero di vocali contenute
+			for (int i = 0; i < o1.length(); i++) {
+				//prendo il sinoglo carattere in base all'indice
+				// confronto della presenza delle vocali
+				if(o1.charAt(i) == 'a' || o1.charAt(i) == 'e' || o1.charAt(i) == 'i' || o1.charAt(i) == 'o' 
+						|| o1.charAt(i) == 'u' ) {
+					// incremeniamo la presenza di vocali
+					o1V++;
+				}
+			}
+			
+			//ciclo sulle parole per trovare il numero di vocali contenute
+			for (int i = 0; i < o2.length(); i++) {
+				//prendo il sinoglo carattere in base all'indice
+				// confronto della presenza delle vocali
+				if(o2.charAt(i) == 'a' || o2.charAt(i) == 'e' || o2.charAt(i) == 'i' || o2.charAt(i) == 'o' 
+						|| o2.charAt(i) == 'u' ) {
+					// incremeniamo la presenza di vocali
+					o2V++;
+				}
+			}
 			// TODO Auto-generated method stub
-			return 0;
+			return - o2V;
 		}
 	}
 	//metodo di eseguzione
@@ -60,7 +86,11 @@ public class Main {
 			
 			
 		}
-		
+		System.out.println("+---+-+-+-+--+-+-+-+-+-+--");
+		//test comparatore
+		VowelsComparator vowelsComparator = new VowelsComparator();
+		wishList.sort(vowelsComparator);
+		System.out.println(wishList);
 		
 		
 		//chiudo lo scanner di comunicazione
