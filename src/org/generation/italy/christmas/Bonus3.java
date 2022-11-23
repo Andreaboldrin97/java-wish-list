@@ -17,12 +17,23 @@ public class Bonus3 {
 				System.out.println("Inserisci una parola");
 				String word = sc.nextLine();
 				//ciclo sulle parole per trovare il numero di vocali contenute
-				for (int i = 0; i < word.length(); i++) {
-					//prendo il sinoglo carattere e lo aggingo collection
-					char wordChar = word.charAt(i);
-					charat.put(wordChar , i);
+				for (Character letter : word.toCharArray()) {
+					//creo una variabile contatore
+					int counter = 0;
+					//controllo se l'elemento è già esistente
+					if (!charat.containsKey(letter)) {
+						//se non esiste il contatore va a 1
+						counter = 1;
+						//inserisco all'interno della collection
+						charat.put(letter, counter);
+					} else {
+						//se non esiste il contatore va a +1
+						counter = charat.get(letter) + 1;
+						//inserisco all'interno della collection
+						charat.put(letter, counter);
+					}
+					
 				}
-				
 				System.out.println(charat);
 				// chiudiamo il canale di comunicazione
 				sc.close();
