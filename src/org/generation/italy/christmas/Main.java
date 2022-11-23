@@ -21,7 +21,8 @@ public class Main {
 		
 		// condizione sulla scelta dellìuser
 		while(userChoise) {
-			
+			System.out.println("La tua lista è di N: " + wishList.size() + " Prodotti");
+			System.out.println("********************");
 			// chiedo a l'user se vuole inserire un elemento o visualizzare la lista 
 			System.out.println("se vuole aggiungere in prodotto alla sua lista scriva TRUE");
 			System.out.println("se vuole vedere la lista dei prodotti scriva FALSE");
@@ -37,14 +38,17 @@ public class Main {
 				//aggiungiamo il prodotto all' ArrayList
 				wishList.add(product);
 			}
-			
+			System.out.println("-------------------------------------------------");
 		}
-		
-		System.out.println(wishList.toString());
 	
 		//condizione di uscita dell'user
 		if(!userChoise) {
-			System.out.println("uscita");
+			
+			// usiamo il sort per crearlo in ordine alfabetico
+			wishList.sort(null);
+			System.out.println("Lista desideri: " + wishList);
+			
+			
 		}
 		
 		
