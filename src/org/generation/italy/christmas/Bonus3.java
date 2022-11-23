@@ -1,0 +1,7 @@
+package org.generation.italy.christmas;
+
+public class Bonus3 {
+	public static void main(String[] args) {
+		
+	}
+}
