@@ -27,9 +27,20 @@ public class Main {
 			System.out.println("se vuole vedere la lista dei prodotti scriva FALSE");
 			// salviamo la scelta in stringa per poi trasformarla
 			String userChoiseStr = sc.nextLine();
-			userChoise =  Boolean.parseBoolean(userChoiseStr);		
+			userChoise =  Boolean.parseBoolean(userChoiseStr);
+			
+			// se userChoise e positivo aggiungiamo un prodotto
+			if(userChoise) {
+				System.out.println("inserisci nome prodotto");
+				String product = sc.nextLine();
+				
+				//aggiungiamo il prodotto all' ArrayList
+				wishList.add(product);
+			}
 			
 		}
+		
+		System.out.println(wishList.toString());
 	
 		//condizione di uscita dell'user
 		if(!userChoise) {
