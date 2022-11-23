@@ -2,11 +2,21 @@ package org.generation.italy.christmas;
 
 // importo le due librerie 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-	
+	//metodo di comparazione
+	public static class vowelsComparator implements Comparator<String>{
+
+		@Override
+		public int compare(String o1, String o2) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+	}
+	//metodo di eseguzione
 	public static void main(String[] args) {
 		
 		
